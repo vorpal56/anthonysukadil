@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+
+<head>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body style = "background-color: #43474f;" >
+    <header>
+        <nav class="navbar navbar-expand navbar-dark bg-dark" >
+            <a class="navbar-brand" href = "{% url 'homepage' %}">
+                <img src="{% static 'me/images/Untitled.png' %}" width = "40" height="40">
+            </a>
+            <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#topNavBar">
+                <span class="navbar-toggler-icon navbar-toggler-left"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#about">About<span class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'documents' %}">Documents</a>
+                    </li> -->
+                </ul>
+                <!-- <span class="navbar-text">
+                    Navbar text with an inline element
+                </span> -->
+            </div>
+        </nav>
+    </header>
+    <div class="img1">
+        <div class="caption1">
+            <span class="no-border" style = "font-weight:bold">ANTHONY SUKADIL</span>
+        </div>
+        <div class="caption2">
+            <span class="no-border" style="font-size:30px">Software Developer</span>
+        </div>
+    </div>
+    </div>
+    <section id = "about" class = "section solid-yellow">
+    <br>
+    <h2 class="no-background"><span>ABOUT ME</span></h2>
+
+    <br><br>
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-sm-6" id ="aboutme">
+            <img class="rounded-circle mx-auto d-block" src="{% static 'me/images/Untitled.png' %}" alt="Generic placeholder image" width="140" height="140">
+            <h2 >Development</h2>
+            <p>
+                <font color ="bfc4c9"> hi </font> 
+            </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-sm-6">
+            <img class="rounded-circle mx-auto d-block" src="{% static 'me/images/Untitled.png' %}" alt="Generic placeholder image" width="140" height="140">
+            <h2>Interests and hobbies</h2>
+            <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.  
+                </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            </div><!-- /.col-lg-4 -->
+             
+        </div><!-- /.row -->    
+    </section>
+    <section id="my_work" class = "section solid-white">
+        <br>
+        <h2 class="no-background"><span>MY WORK</span></h2>
+
+        <div class = "card-columns">
+            <div class="card">
+                <img class="card-img" src="{% static 'me/images/1.jpg' %}"  style="height: 260px; width: 100; display: block;">
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="resume" class = "section solid-blue">
+            <br>
+            <h2 class="no-background"><span>MY RESUME</span></h2>
+            <br><br>
+    </section>
+
+    <div class="footerspace">
+    </div>
+    <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>
+            <font color = "#bfc4c9"> Anthony Sukadil 2018</font>
+        </p>
+        <!-- <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p> -->
+    </footer>   
+    
+
+</body>
+</html>
