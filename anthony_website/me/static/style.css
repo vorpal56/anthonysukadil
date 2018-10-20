@@ -4,7 +4,7 @@
 
 
 body {
-    padding-bottom: 3rem;
+    /* padding-bottom: 3rem; */
     /* background: solid #43474f; */
   }
   
@@ -41,7 +41,7 @@ body {
   
   /* Center align the text within the three columns below the carousel */
   .marketing .col-sm-6 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 3.4rem;
     text-align: center;
   }
   .marketing h2 {
@@ -52,7 +52,15 @@ body {
     margin-left: .75rem;
   }
   
+  .marketing .col-sm-10-form {
+    margin-bottom: 1.4rem;
+    text-align: center;
+  }
   
+  .marketing .col-sm-12-form {
+    margin-bottom: 3.4rem;
+    text-align: center;
+  }
   /* Featurettes
   ------------------------- */
   
@@ -92,8 +100,24 @@ body {
   
 div.footerspace {
     height:100px;
+    background-color:#343a40;
+}
+h2.header-white, h2.header-black {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+h2.header-white {
+    /* color: #bfc4c9; */
+    color: #f2f2f2;
+}
+
+p.white {
+    /* color: #bfc4c9; */
+    color: #f2f2f2;
 }
 h2.no-background {
+    padding-top: 20px;
+    padding-bottom: 20px;
     position: relative;
     overflow: hidden;
 }
@@ -109,27 +133,30 @@ h2 span {
     padding: 0 1px;
 }
 
-h2 span:before {
-    right: 100%;
+h2 span.black:before, h2 span.white:before {
+    right: 85%;
     content: '';
     display: block;
     width: 400px;
     position: absolute;
     top: 0.6em;
-    border-top: 4px solid rgba(0, 0, 0, 0.25);
     margin:0 auto;
 }
-h2 span:after{
-    left: 100%;
+h2 span.black:after, h2 span.white:after {
+    left: 85%;
     content: '';
     display: block;
     width: 400px;
     position: relative;
     top: -0.51em;
-    border-top: 4px solid rgba(0, 0, 0, 0.25);
     margin:0 auto;
 }
-
+h2 span.black:before, h2 span.black:after {
+    border-top: 4px solid rgba(0, 0, 0, 0.25);
+}
+h2 span.white:before, h2 span.white:after {
+    border-top: 4px solid rgba(255, 255, 255, 0.842);
+}
 .section.solid-yellow {
     background: #efab00;
 }
@@ -144,6 +171,9 @@ h2 span:after{
 
 .section.solid-white {
     background: #f2f2f2;
+}
+.section.solid-dark {
+    background: #43474f;
 }
 
 
@@ -188,11 +218,36 @@ body, html {
 }
 .caption1 span.no-border, .caption2 span.no-border{
     background-color: transparent;
-    color: #bfc4c9;
+    /* color: #bfc4c9; */
+    color: #f2f2f2;
     /* color:#333333; */
-    padding: 18px;
+    /* padding: 0 10px; */
     font-size: 35px;
+    
     /* font-weight: bold; */
     letter-spacing: 10px;
 }
-  
+#about, #my_work, #documents, #contact {
+    background-color: transparent;
+    margin-top: -66px;
+    padding-top: 66px;
+}
+.active {
+    font-size: bold;
+}
+.download {
+    width: 80% !important;
+    margin-left:10%;
+    background-color:#d8d8d8; 
+    color:#43474f;
+    margin-bottom: 3.1rem;
+}
+.submit {
+    background-color:#d8d8d8; 
+    color:#43474f;
+}
+
+.view-git {
+    background-color: #d8d8d8; 
+    color:#43474f;
+}

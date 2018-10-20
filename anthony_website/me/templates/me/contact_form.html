@@ -1,0 +1,55 @@
+{% extends 'me/page_layout.html' %}
+
+{% block content %}
+
+    <!-- Contact me section -->
+    <section id="contact"></section>
+    <!-- <section class = "section solid-white"> -->
+        <h2 class="no-background"><span class = 'black'>CONTACT</span></h2>
+        <!-- <form  method = "post" >
+            <div class = "container marketing">
+                <div class="row">
+                    <label for="staticEmail" class="col-sm-1 col-form-label">Email</label>
+                    <div class="col-sm-11" style = "margin-bottom:1.4rem">
+                    <input type="email" class="form-control"  style = "width: 50%"
+                    id="inputEmail" placeholder="email@example.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputMessage">Message</label>
+                    <textarea class="form-control" id="inputMessage" rows="8"></textarea>
+                </div>
+                <a class="btn btn-secondary submit" 
+                href = "#" style="margin-bottom: 1.8rem" role="button"> 
+                    Submit
+                </a>
+            </div>
+        </form>   
+    </section> -->
+
+    <div class="container marketing">
+        <form method = "post">
+            {% csrf_token %}
+            
+            {% for field in form_context %}
+                {% if field.label == 'Email' %}
+                <div class="row" style="margin-top:15px">
+                    <label for={{field.id_for_label}} class="col-sm-1 col-form-label">{{field.label_tag}}</label>
+                    <div class="col-sm-11" style = "margin-bottom:1.4rem">
+                        <input type="email" class="form-control"  style = "width: 50%"
+                        id="inputEmail" placeholder="email@example.com"> {{email}}
+                    </div>
+                </div>  
+                {% else %}
+                <div class="form-group">
+                        <label for="{{field.id_for_label}}">{{field.label}}</label>
+                        <textarea class="form-control" id="{{field.id_for_label}}" rows="8">{{text}}</textarea>
+                    </div>
+
+                {% endif %}
+            {%endfor%}
+            <button class = "btn btn-secondary submit" type = "submit" style="margin-bottom: 1.8rem" href="#">Submit</button>
+        </form>
+    </div>
+
+{% endblock %}
