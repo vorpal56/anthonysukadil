@@ -24,5 +24,5 @@ urlpatterns = [
     # path('success/', views.download_resume, name = "resume"),
     # path('transcript/', views.download_transcript, name = "transcript"),
     path('', views.contactView.as_view(), name = "homepage"),
-    # path('success/', views.success_email, name = "success"),
+    # path('success/', views.contactView.as_view(), name = "success"),
 ]

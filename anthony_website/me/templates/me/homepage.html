@@ -1,15 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
-{% extends 'me/page_layout.html' %}
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+<!-- Parallax image with text overlay-->
+{% extends 'me/banner.html' %}
+{% include 'me/contact_form.html' %}
+{% load staticfiles %}
+<html>
 <body>
-    {% block content %}
-    <h3>hello</h3>
+{% block about %}
+<div class="img1">
+        <div class="caption1">
+            <span class="no-border" style = "font-weight:bold;">ANTHONY SUKADIL</span><br>
+            <span class="no-border" style="font-size:2em">Software Developer</span>
+        </div>
+    </div>
+    <!-- Navbar fixed-top, added padding, not the best soln but gets the job done -->
+    <!-- About me section -->
+    
+    <section id="about"></section>
+    <section class = "section solid-yellow">
+        <!-- <h2 class="no-background" style = "color: #f2f2f2"><span class= "white">ABOUT ME</span></h2> -->
+        <h2 class="no-background"><span class = "black">ABOUT ME</span></h2>
+        <div class="container marketing">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img class="rounded-circle mx-auto d-block" src="{% static 'me/images/Untitled.png' %}" alt="Generic placeholder image" width="140" height="140">
+                    <h2 class = "header-black">Development</h2>
+                    <p class="black">
+                        I spent my time in highschool using VB and making some object oriented games. 
+                        Since, then I have been working mostly with Python, Java, C, and VBA, 
+                        with some familiarity in Django, HTML, MySQL, and CSS.
+                    </p> 
+                    <!-- <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a> -->
+                </div>
+                <div class="col-sm-6">
+                    <img class="rounded-circle mx-auto d-block" src="{% static 'me/images/Untitled.png' %}" alt="Generic placeholder image" width="140" height="140">
+                    <h2 class = "header-black">Interests and hobbies</h2>
+                    <p class="black"> 
+                        I love reading about health-related issues, their solutions, 
+                        and helping others make more informed decisions. 
+                        Topics such as diabetes, hypertension, obesity, fasting, and most importantly, nutrition.
+
+                    </p>
+                    <!-- <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a> -->
+                </div>
+            </div>  
+        </div>
+    </div>
+    <!-- My work section -->
+    <section id="my_work"></section>    
+    <section class = "section solid-white">
+        <h2 class="no-background"><span class = "black">MY WORK</span></h2>
+        <div class="container marketing">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img class="card-img" src="{% static 'me/images/b.png' %}"  style=" max-width:300px;">
+                    <h2 class = "header-black">B²</h2>
+                    <p>B² is a short puzzle game where the player starts from one point 
+                        and gets to the red point by clearing all the tiles. 
+                        Tile properties differ and can make or break your route.</p>
+                    <a class="btn btn-secondary view-git"  href="https://github.com/vorpal56/ICS4U1" role="button">View on GitHub &raquo;</a>
+                </div>
+                <div class="col-sm-6">
+                    <img class="card-img" src="{% static 'me/images/exiled.png' %}"  style=" max-width:300px;">
+                    <h2 class = "header-black">Exiled</h2>
+                    <p> 
+                        Exiled is a longer puzzle game that challenges your 
+                        ability to memorize layouts and make precise movements to get to the end point.
+                        It gets pretty tough as you go along!
+                    </p>
+                    <a class="btn btn-secondary view-git" href="https://github.com/vorpal56/ICS3U1" role="button">View on Github &raquo;</a>
+                </div>
+                    
+            </div>   
+        </div> 
+    </section>
+    <!-- Documents section -->
+    <section id="documents"></section>
+    <section class = "section solid-yellow">
+        <!-- <h2 class="no-background"style = "color: #f2f2f2"><span class = "white">DOCUMENTS</span></h2> -->
+        <h2 class="no-background"><span class = "black">DOCUMENTS</span></h2>
+        <div class="container marketing">
+            <div class="col-sm-12">
+                <a class="btn btn-secondary download" 
+                
+                href = "https://drive.google.com/uc?export=download&id=1XSF5Um4VL5YJm0BzhdPsrD16iJF9WFQ2" style="margin-bottom: 1.2rem" role="button"> 
+                    Resume (.pdf) &nbsp;&DownArrowBar;
+                </a>
+            </div>
+            <div class="col-sm-12">
+                <a class="btn btn-secondary download" 
+                href="https://drive.google.com/uc?export=download&id=10c90Ompi3PfKc0GlToSwLgkAbEbfX8wB" role="button"> 
+                    Transcript (.pdf) &nbsp;&DownArrowBar;</a>
+            </div>     
+        </div>
+    </section>
+    <section id="contact"></section>
+            {% block contact %}
+    
+            {% endblock %}
+    
+    <footer class="my-5 pt-5 text-center text-small" style = "background-color:#343a40; color:#f2f2f2">
+        <p>&copy; 2018 Anthony Sukadil</p>
+            <li class="list-inline-item">
+                <a href="https://github.com/vorpal56" >   
+                    <img class = "rounded-circle" src="{% static 'me/images/github-light.png' %}" width = "40" height = "40">
+                </a>
+            </li>
+            <li class="list-inline-item" style = "margin-bottom:4rem">
+                <a href="https://www.linkedin.com/in/anthony-sukadil-b27787152/" >   
+                    <img  src="{% static 'me/images/In-White-48px-TM.png' %}" width = "48" height = "40">
+                </a>
+            </li>
+            <!-- <li class="list-inline-item" style = "margin-bottom: 4rem"><a href="#">Support</a></li> -->
+
+    </footer>
     {% endblock %}
 </body>
 </html>

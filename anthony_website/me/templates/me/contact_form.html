@@ -1,10 +1,10 @@
-{% extends 'me/page_layout.html' %}
+{% extends 'me/homepage.html' %}
 
-{% block content %}
+{% block contact %}
 
     <!-- Contact me section -->
-    <section id="contact"></section>
-    <!-- <section class = "section solid-white"> -->
+    
+    <section class = "section solid-white">
         <h2 class="no-background"><span class = 'black'>CONTACT</span></h2>
         <!-- <form  method = "post" >
             <div class = "container marketing">
@@ -30,26 +30,37 @@
     <div class="container marketing">
         <form method = "post">
             {% csrf_token %}
-            
             {% for field in form_context %}
                 {% if field.label == 'Email' %}
                 <div class="row" style="margin-top:15px">
                     <label for={{field.id_for_label}} class="col-sm-1 col-form-label">{{field.label_tag}}</label>
-                    <div class="col-sm-11" style = "margin-bottom:1.4rem">
-                        <input type="email" class="form-control"  style = "width: 50%"
-                        id="inputEmail" placeholder="email@example.com"> {{email}}
+                    <div class="col-sm-5" style = "margin-bottom:1.4rem">
+                        {{field}}
+                    </div>  
+                {% elif field.label == 'Subject' %}
+                    <label for={{field.id_for_label}} class="col-sm-1 col-form-label">{{field.label_tag}}</label>
+                    <div class="col-sm-5" style = "margin-bottom:1.4rem">
+                        {{field}}
                     </div>
-                </div>  
+                </div>
                 {% else %}
                 <div class="form-group">
-                        <label for="{{field.id_for_label}}">{{field.label}}</label>
-                        <textarea class="form-control" id="{{field.id_for_label}}" rows="8">{{text}}</textarea>
-                    </div>
+                    <label for="{{field.id_for_label}}">{{field.label}}</label>
+                    {{field}}
+                </div>
 
                 {% endif %}
             {%endfor%}
-            <button class = "btn btn-secondary submit" type = "submit" style="margin-bottom: 1.8rem" href="#">Submit</button>
+            
+            <button onclick="gotocontact()" class = "btn btn-secondary submit" type = "submit" style="margin-bottom: 1.2rem" href="#contact">Submit</button>
         </form>
+        <label style = "margin-bottom: 1.2rem" >{{message}}</label>
     </div>
 
 {% endblock %}
+<script type="text/javascript">
+    function gotocontact(e) {
+        e.preventDefault();
+        window.location.href="#contact";
+    }
+</script> 
