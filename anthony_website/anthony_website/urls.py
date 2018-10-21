@@ -20,9 +20,7 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('about/', views.about, name = "about"),
-    # path('success/', views.download_resume, name = "resume"),
-    # path('transcript/', views.download_transcript, name = "transcript"),
     path('', views.contactView.as_view(), name = "homepage"),
-    # path('success/', views.contactView.as_view(), name = "success"),
+    # path('about/', views.home, name = "about"),
+    
 ]

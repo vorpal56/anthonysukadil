@@ -1,13 +1,4 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
 
-
-  
-  /* CUSTOMIZE THE CAROUSEL
-  -------------------------------------------------- */
-  
-  /* Carousel base class */
   .carousel {
     margin-bottom: 4rem;
   }
@@ -29,12 +20,6 @@
     min-width: 100%;
     height: 32rem;
   }
-  
-  
-  /* MARKETING CONTENT
-  -------------------------------------------------- */
-  
-  /* Center align the text within the three columns below the carousel */
   .marketing .col-sm-6 {
     margin-bottom: 3.4rem;
     text-align: center;
@@ -70,7 +55,6 @@
     letter-spacing: -.05rem;
   }
   
-  
   /* RESPONSIVE CSS
   -------------------------------------------------- */
   
@@ -92,24 +76,16 @@
       margin-top: 7rem;
     }
   }
-  
-div.footerspace {
-    height:100px;
-    background-color:#343a40;
-}
+/* -------------------------------------------------------------------------------------------------------- */
 h2.header-white, h2.header-black {
     padding-top: 20px;
     padding-bottom: 10px;
 }
-h2.header-white {
+h2.header-white, p.white {
     /* color: #bfc4c9; */
     color: #f2f2f2;
 }
 
-p.white {
-    /* color: #bfc4c9; */
-    color: #f2f2f2;
-}
 h2.no-background {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -152,48 +128,23 @@ h2 span.black:before, h2 span.black:after {
 h2 span.white:before, h2 span.white:after {
     border-top: 4px solid rgba(255, 255, 255, 0.842);
 }
-.section.solid-yellow {
+.section-solid-yellow {
     background: #efab00;
 }
 
-.section.solid-red {
+.section-solid-red {
     background: #ad0d05;
 }
 
-.section.solid-blue {
+.section-solid-blue {
     background:#335caf ;
 }
 
-.section.solid-white {
+.section-solid-white {
     background: #f2f2f2;
 }
-.section.solid-dark {
+.section-solid-dark {
     background: #43474f;
-}
-
-.page-section {
-    height: 480px;
-    width: 50%;
-    margin-left: 35%;
-    margin-top: 5%;
-    padding: 3em;
-background: linear-gradient(45deg, #43cea2 10%, #185a9d 90%);
-    color: white;
-    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.5);
-}
-
-.img1 {
-    /* The image used */
-    background: url("me/images/1.jpg");
-
-    /* Full height */
-    height: 100%; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
@@ -201,10 +152,6 @@ background: linear-gradient(45deg, #43cea2 10%, #185a9d 90%);
     .parallax {
         background-attachment: scroll;
     }
-}
-
-body, html {
-    height: 100%;
 }
 
 .caption1, .caption2 {
@@ -241,21 +188,71 @@ body, html {
     font-size: bold;
 }
 .download {
-    width: 80% !important;
-    margin-left:10%;
+    width: 50% !important;
+    margin-left:25%;
     background-color:#d8d8d8; 
     color:#43474f;
     margin-bottom: 3.1rem;
 }
-.submit {
+.submit, .view-git {
     background-color:#d8d8d8; 
     color:#43474f;
 }
 
-.view-git {
-    background-color: #d8d8d8; 
-    color:#43474f;
-}
 .active {
     color:#d8d8d8;
 }
+body, html {
+    height: 100%;
+}
+
+.wrapper {
+    width:100%;
+    /* The height needs to be set to a fixed value for the effect to work.
+     * 100vh is the full height of the viewport. */
+    height: 100%;
+    /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+    overflow-x: hidden;
+    /* Enable scrolling on the page. */
+    /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+    perspective: 2.1px;
+}
+.parallax:after {
+    /* Display and position the pseudo-element */
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    /* Move the pseudo-element back away from the camera,
+     * then scale it back up to fill the viewport.
+     * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+    transform: translateZ(-1px) scale(1.5);
+    /* Force the background image to fill the whole element. */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Keep the image from overlapping sibling elements. */ 
+    z-index: -1;
+}
+  
+  /* The styling for the static div. */
+  /* Sets the actual background images to adorable kitties. This part is crucial. */
+.bg1:after {
+    background-image: url("me/images/1.jpg");
+}
+.section {
+    /* Needed for children to be absolutely positioned relative to the parent. */
+    /* position: relative; */
+    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+    height: 100%;
+    
+    /* For text formatting. */
+    /* display: flex; */
+    align-items: center;
+    /* justify-content: center; */
+    /* color: white; */
+    /* text-shadow: 0 0 5px #000; */
+}
+  
