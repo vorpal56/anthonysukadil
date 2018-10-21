@@ -137,16 +137,22 @@ h2 span.white:before, h2 span.white:after {
 }
 
 .section-solid-blue {
-    background:#335caf ;
+    background:#3f72d8 ;
+    /* background: #244075; */
 }
 
 .section-solid-white {
     background: #f2f2f2;
 }
+.section-solid-white2 {
+    background: #fff;
+}
 .section-solid-dark {
     background: #43474f;
 }
-
+.section-this-test {
+    background: #6096dd;
+}
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
     .parallax {
