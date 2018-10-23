@@ -1,8 +1,10 @@
 {% extends 'me/homepage.html' %}
 {% block contact %}
-<section class = "section-solid-white">
-<h2 class="no-background"><span class = 'black'>CONTACT</span></h2>
+<section class = "section-solid-white2">
+<h2 class="no-background"><span class = 'black' style = "font-weight: bold">CONTACT</span></h2>
+
 <div class="container marketing">
+        <p class="black" style="text-align:center">Have any questions? Want to chat about something? Send me an email!</p>
     <form method = "post">
         {% csrf_token %}
         {% for field in form_context %}
@@ -15,7 +17,7 @@
                     <!-- continue to the next if in this order -->
             {% elif field.label == 'Subject' %}
                     <label for={{field.id_for_label}} class="col-sm-1 col-form-label">{{field.label_tag}}</label>
-                    <div class="col-sm-5" style = "margin-bottom:1.4rem">
+                    <div class="col-sm-5" style = "margin-bottom:1rem">
                         {{field}}
                     </div>
                 </div>
@@ -26,7 +28,7 @@
                 </div>
             {% endif %}
         {%endfor%}
-        <button class = "btn btn-secondary submit" type = "submit" style="margin-bottom: 1.2rem" href="#contact">Submit</button>
+        <button class = "button button-white" type = "submit" style="margin-bottom: 1.2rem" href="#contact">Submit</button>
     </form>
     <label style = "margin-bottom: 1.2rem" >{{message}}</label>
 </div>

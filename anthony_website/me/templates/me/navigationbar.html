@@ -5,7 +5,7 @@
         <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
         <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-        <link rel="icon" href="{% static 'me/images/favicon.png' %}">
+        <link rel="icon" href="{% static 'images/icons/asiconblack.png' %}">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,9 +13,9 @@
     </head>
     <body style = "background-color: #f2f2f2" >
         <header>
-            <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-md fixed-top navbar-dark" style = "background-color: #272727">
                 <a class="navbar-brand" href = "{% url 'homepage' %}">
-                    <img src="{% static 'me/images/image.png' %}" width = "40" height="40">
+                    <img src="{% static 'images/icons/aswhite.png' %}" width = "40" height="40">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -45,8 +45,8 @@
         <main class="wrapper" style = "scroll-behavior: smooth"> 
             <div id = "top"></div>
             <section class="section parallax bg1">
-                <div class="caption1">
-                    <span class="no-border" style = "font-weight:bold;">ANTHONY SUKADIL</span><br>
+                <div class="caption1" id = "fade-in">
+                    <span class="no-border" style = "font-weight:bold;font-size:2.4em">ANTHONY SUKADIL</span><br>
                     <span class="no-border" style="font-size:2em">Software Developer</span>
                 </div>
             </section>
