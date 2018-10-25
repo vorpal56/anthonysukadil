@@ -3,120 +3,126 @@
 <html>
     <body>
     {% block about %}
-        <!-- About me section -->
-        <section id="about"></section>
-        <section class = "section-solid-white">
-            <h2 class="no-background"><span class = "black" style = "font-weight: bold">ABOUT ME</span></h2>
-            <div class="container marketing">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <img class="rounded-circle mx-auto d-block" src="{% static 'images/defaultwhite.png' %}" width="140" height="140">
-                        <h2 class = "header-black">What I do</h2>
-                        <p class="black"> 
-                            I'm a Junior Software Developer currently in 3rd year
-                            studying Computer Science at Wilfrid Laurier University 
-                            in Waterloo with a focus on Data Science.
-
-                        </p>
-                    </div>
-                    <div class="col-sm-4">
-                        <img class="rounded-circle mx-auto d-block" src="{% static 'images/code2.png' %}" width="140" height="140">
-                        <h2 class="header-black">Development</h2>
-                        <p class="black">
-                            In highschool, we mostly used Visual Basic, making object-based games and programs. 
-                            Since then, I have been working mostly with Python, Java, C, and VBA, 
-                            with familiarity in Django, MySQL, and HTML.
-                        </p> 
-                    </div>
-                    <div class="col-sm-4">
-                        <img class="rounded-circle mx-auto d-block" src="{% static 'images/leafgreen.png' %}" width="140" height="140">
-                        <h2 class = "header-black">Interests and hobbies</h2>
-                        <p class="black"> 
-                            I love reading about health-related issues, their solutions, 
-                            and helping others make more informed decisions. 
-                            Topics such as diabetes, hypertension, obesity, fasting, and most importantly, nutrition.
-
-                        </p>
-                    </div>
-                </div>  
-            </div>
-        </section>
-        <!-- My work section -->
-        <section id="my_work"></section>    
-        <section class = "section-solid-white2">
-            <h2 class="no-background"><span class = "black" style = "font-weight: bold">MY WORK</span></h2>
-            <div class="container marketing">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <img class="card-img" src="{% static 'images/b.png' %}"  style=" max-width:300px;">
-                        <h2 class = "header-black">B²</h2>
-                        <p>B² is a short puzzle game where the player starts from one point 
-                            and gets to the red point by clearing all the tiles. 
-                            Tile properties differ and can make or break your route.</p>
-                        <a class="button button-white"  href="https://github.com/vorpal56/ICS4U1" 
-                        role="button">View on GitHub &longrightarrow;</a>
-                    </div>
-                    <div class="col-sm-6">
-                        <img class="card-img" src="{% static 'images/exiled.png' %}"  style=" max-width:300px;">
-                        <h2 class = "header-black">Exiled</h2>
-                        <p> 
-                            Exiled is a longer puzzle game that challenges your 
-                            ability to memorize layouts and make precise movements to get to the end point.
-                            It gets pretty tough as you go along!
-                        </p>
-                        <a class="button button-white" href="https://github.com/vorpal56/ICS3U1" 
-                        role="button">View on GitHub &longrightarrow;</a>
-                    </div>
-                        
-                </div>   
-            </div> 
-        </section>
-        <!-- Documents section -->
-        <section id="documents"></section>
-        <section class = "section-solid-white">
-            <h2 class="no-background"><span class = "black" style = "font-weight: bold">DOCUMENTS</span></h2>
-            <div class="container marketing">
-                <div class="col-sm-12">
-                    <a class="button button-white download" style="margin-bottom:1.4rem"
-                    href = "https://drive.google.com/uc?export=download&id=1XSF5Um4VL5YJm0BzhdPsrD16iJF9WFQ2" style="margin-bottom: 1.2rem" role="button"> 
-                        Resume (.pdf) &nbsp;&DownArrowBar;
-                    </a>
+    <!-- Parallax background -->
+    <section class="img1 darken-overlay" style="background-position-y : 0px">
+    <div class="caption1" id = "fade-in">
+        <span class="no-border" style = "font-weight:bold;font-size:2.4em">ANTHONY SUKADIL</span><br>
+        <span class="no-border" style="font-size:2em">Software Developer</span>
+    </div>
+    </section>  
+    <!-- About me section -->
+    <section id="about"></section>
+    <section class = "section-solid-white">
+        <h2 class="no-background"><span class = "black" style = "font-weight: bold">ABOUT ME</span></h2>
+        <div class="container marketing">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img class="rounded-circle mx-auto d-block" src="{% static 'images/defaultwhite.png' %}" width="140" height="140">
+                    <h2 class = "header-black">What I do</h2>
+                    <p class="black"> 
+                        I'm a Junior Software Developer currently in 3rd year
+                        studying Computer Science at Wilfrid Laurier University 
+                        in Waterloo with a focus on Data Science.
+                    </p>
                 </div>
-                <div class="col-sm-12">
-                    <a class="button button-white download" style="margin-bottom:3.1rem"
-                    href="https://drive.google.com/uc?export=download&id=10c90Ompi3PfKc0GlToSwLgkAbEbfX8wB" role="button"> 
-                        Transcript (.pdf) &nbsp;&DownArrowBar;</a>
-                </div>     
+                <div class="col-sm-4">
+                    <img class="rounded-circle mx-auto d-block" src="{% static 'images/code2.png' %}" width="140" height="140">
+                    <h2 class="header-black">Development</h2>
+                    <p class="black">
+                        In highschool, we mostly used Visual Basic, making object-based games and programs. 
+                        Since then, I have been working mostly with Python, Java, C, and VBA, 
+                        with familiarity in Django, MySQL, and HTML.
+                    </p> 
+                </div>
+                <div class="col-sm-4">
+                    <img class="rounded-circle mx-auto d-block" src="{% static 'images/leafgreen.png' %}" width="140" height="140">
+                    <h2 class = "header-black">Interests and hobbies</h2>
+                    <p class="black"> 
+                        I love reading about health-related issues, their solutions, 
+                        and helping others make more informed decisions. 
+                        Topics such as diabetes, hypertension, obesity, fasting, and most importantly, nutrition.
+                    </p>
+                </div>
+            </div>  
+        </div>
+    </section>
+    <!-- My work section -->
+    <section id="my_work"></section>    
+    <section class = "section-solid-white2">
+        <h2 class="no-background"><span class = "black" style = "font-weight: bold">MY WORK</span></h2>
+        <div class="container marketing">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img class="card-img" src="{% static 'images/b.png' %}"  style=" max-width:300px;">
+                    <h2 class = "header-black">B²</h2>
+                    <p>B² is a short puzzle game where the player starts from one point 
+                        and gets to the red point by clearing all the tiles. 
+                        Tile properties differ and can make or break your route.</p>
+                    <a class="button button-white"  href="https://github.com/vorpal56/ICS4U1" 
+                    role="button">View on GitHub &longrightarrow;</a>
+                </div>
+                <div class="col-sm-6">
+                    <img class="card-img" src="{% static 'images/exiled.png' %}"  style=" max-width:300px;">
+                    <h2 class = "header-black">Exiled</h2>
+                    <p> 
+                        Exiled is a longer puzzle game that challenges your 
+                        ability to memorize layouts and make precise movements to get to the end point.
+                        It gets pretty tough as you go along!
+                    </p>
+                    <a class="button button-white" href="https://github.com/vorpal56/ICS3U1" 
+                    role="button">View on GitHub &longrightarrow;</a>
+                </div>
+                    
+            </div>   
+        </div> 
+    </section>
+    <!-- Documents section -->
+    <section id="documents"></section>
+    <section class = "section-solid-white">
+        <h2 class="no-background"><span class = "black" style = "font-weight: bold">DOCUMENTS</span></h2>
+        <div class="container marketing">
+            <div class="col-sm-12">
+                <a class="button button-white download" style="margin-bottom:1.4rem"
+                href = "https://drive.google.com/uc?export=download&id=1XSF5Um4VL5YJm0BzhdPsrD16iJF9WFQ2" style="margin-bottom: 1.2rem" role="button"> 
+                    Resume (.pdf) &nbsp;&DownArrowBar;
+                </a>
             </div>
-        </section>
-        <!-- Contact form section -->
-        <section id="contact"></section>
-        {% block contact %}
-        {% endblock %}
-        <footer class="pt-5 text-center text-small" style = "background-color:#272727; color:#f2f2f2">
-            <p>&copy; 2018 Anthony Sukadil</p>
-            <li class="list-inline-item"style="margin-right: 1.2rem">
-                <a href="https://github.com/vorpal56" >   
-                    <img src="{% static 'images/icons/GitHub-Mark-Light-64px.png' %}" width = "40" height = "40">
+            <div class="col-sm-12">
+                <a class="button button-white download" style="margin-bottom:3.1rem"
+                href="https://drive.google.com/uc?export=download&id=10c90Ompi3PfKc0GlToSwLgkAbEbfX8wB" role="button"> 
+                    Transcript (.pdf) &nbsp;&DownArrowBar;</a>
+            </div>     
+        </div>
+    </section>
+    <!-- Contact form section -->
+    <section id="contact"></section>
+    {% block contact %}
+    {% endblock %}
+    <footer class="pt-5 text-center text-small" style = "background-color:#272727; color:#f2f2f2">
+        <p>&copy; 2018 Anthony Sukadil</p>
+        <li class="list-inline-item"style="margin-right: 1.2rem">
+            <a href="https://github.com/vorpal56" >   
+                <img src="{% static 'images/icons/GitHub-Mark-Light-64px.png' %}" width = "40" height = "40">
+            </a>
+        </li>
+        <li class="list-inline-item" style = "margin-right: 1.6rem">
+            <a href="https://www.facebook.com/anthony.sukadil" >   
+                <img src="{% static 'images/icons/facebook-3-xxl.png' %}" width = "40" height = "40">
+            </a>
+        </li>
+        <li class="list-inline-item"style="margin-right: 0.8rem">
+                <a href="https://www.linkedin.com/in/anthony-sukadil-b27787152/" >   
+                    <img  src="{% static 'images/icons/In-White-48px-TM.png' %}" width = "48" height = "40">
                 </a>
             </li>
-            <li class="list-inline-item" style = "margin-right: 1.6rem">
-                <a href="https://www.facebook.com/anthony.sukadil" >   
-                    <img src="{% static 'images/icons/facebook-3-xxl.png' %}" width = "40" height = "40">
-                </a>
-            </li>
-            <li class="list-inline-item"style="margin-right: 0.8rem">
-                    <a href="https://www.linkedin.com/in/anthony-sukadil-b27787152/" >   
-                        <img  src="{% static 'images/icons/In-White-48px-TM.png' %}" width = "48" height = "40">
-                    </a>
-                </li>
-            <li class="list-inline-item" style = "margin-bottom:4rem">
-                <a href="https://www.instagram.com/anthonysukadil/?hl=en" >   
-                    <img src="{% static 'images/icons/ig-logo.svg' %}" width = "40" height = "40">
-                </a>
-            </li>
-            <!-- <li class="list-inline-item" style = "margin-bottom: 4rem"><a href="#">Support</a></li> -->
-        </footer>    
+        <li class="list-inline-item" style = "margin-bottom:4rem">
+            <a href="https://www.instagram.com/anthonysukadil/?hl=en" >   
+                <img src="{% static 'images/icons/ig-logo.svg' %}" width = "40" height = "40">
+            </a>
+        </li>
+        <!-- <li class="list-inline-item" style = "margin-bottom: 4rem"><a href="#">Support</a></li> -->
+    </footer>    
     {% endblock %}
     </body>
 </html>
+

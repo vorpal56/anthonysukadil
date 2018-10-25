@@ -1,5 +1,7 @@
 {% extends 'me/homepage.html' %}
+
 {% block contact %}
+<title>{{title}}</title>
 <section class = "section-solid-white2">
 <h2 class="no-background"><span class = 'black' style = "font-weight: bold">CONTACT</span></h2>
 
@@ -28,7 +30,7 @@
                 </div>
             {% endif %}
         {%endfor%}
-        <button class = "button button-white" type = "submit" style="margin-bottom: 1.2rem" href="#contact">Submit</button>
+        <button class = "button button-white" type = "submit" style="margin-bottom: 1.2rem;" href="#contact">Submit</button>
     </form>
     <label style = "margin-bottom: 1.2rem" >{{message}}</label>
 </div>

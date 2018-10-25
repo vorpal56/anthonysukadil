@@ -1,83 +1,96 @@
-
-  .carousel {
+.carousel {
     margin-bottom: 4rem;
-  }
+}
   /* Since positioning the image, we need to help out the caption */
-  .carousel-caption {
+.carousel-caption {
     bottom: 3rem;
     z-index: 10;
-  }
+}
   
   /* Declare heights because of positioning of img element */
-  .carousel-item {
+.carousel-item {
     height: 32rem;
     /* background-color: #777; */
-  }
-  .carousel-item > img {
+}
+.carousel-item > img {
     position: absolute;
     top: 0;
     left: 0;
     min-width: 100%;
     height: 32rem;
-  }
-  .marketing .col-sm-6, .marketing .col-sm-4 {
+}
+.marketing .col-sm-6, .marketing .col-sm-4 {
     margin-bottom: 3.4rem;
     text-align: center;
-  }
-  .marketing h2 {
+}
+.marketing h2 {
     font-weight: 400;
-  }
-  .marketing .col-sm-6 p, .marketing .col-sm-4 p{
+}
+.marketing .col-sm-6 p, .marketing .col-sm-4 p{
     margin-right: .75rem;
     margin-left: .75rem;
-  }
-  
-
-  .marketing .col-sm-10-form {
+}
+.marketing .col-sm-10-form {
     margin-bottom: 1.4rem;
     text-align: center;
-  }
+}
   
-  .marketing .col-sm-12-form {
+.marketing .col-sm-12-form {
     margin-bottom: 3.4rem;
     text-align: center;
-  }
+}
   /* Featurettes
   ------------------------- */
   
-  .featurette-divider {
+.featurette-divider {
     margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-  }
+}
   
   /* Thin out the marketing headings */
-  .featurette-heading {
+.featurette-heading {
     font-weight: 300;
     line-height: 1;
     letter-spacing: -.05rem;
-  }
+}
   
   /* RESPONSIVE CSS
   -------------------------------------------------- */
   
-  @media (min-width: 40em) {
+@media (min-width: 40em) {
     /* Bump up size of carousel content */
     .carousel-caption p {
-      margin-bottom: 1.25rem;
-      font-size: 1.25rem;
-      line-height: 1.4;
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
     }
   
     .featurette-heading {
-      font-size: 50px;
+        font-size: 50px;
     }
-  }
+}
   
-  @media (min-width: 62em) {
+@media (min-width: 62em) {
     .featurette-heading {
-      margin-top: 7rem;
+        margin-top: 7rem;
     }
-  }
+}
 /* -------------------------------------------------------------------------------------------------------- */
+body, html {
+    height: 100%;
+    font-family: 'proximanova';
+    scroll-behavior: smooth !important;
+}
+.section-solid-white {
+    /* background: #f2f2f2; */
+    background: #fff;
+}
+.section-solid-white2 {
+    background: #edeeef;
+}
+.active {
+    color:#d8d8d8;
+    /* font-size: bold; */
+}
 h2.header-white, h2.header-black {
     padding-top: 20px;
     padding-bottom: 10px;
@@ -129,39 +142,6 @@ h2 span.black:before, h2 span.black:after {
 h2 span.white:before, h2 span.white:after {
     border-top: 4px solid rgba(255, 255, 255, 0.842);
 }
-.section-solid-yellow {
-    background: #efab00;
-}
-
-.section-solid-red {
-    background: #ad0d05;
-}
-
-.section-solid-blue {
-    background:#3f72d8 ;
-    /* background: #244075; */
-}
-
-.section-solid-white {
-    /* background: #f2f2f2; */
-    background: #fff;
-}
-.section-solid-white2 {
-    background: #edeeef;
-}
-.section-solid-dark {
-    background: #43474f;
-}
-.section-this-test {
-    background: #6096dd;
-}
-/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
-@media only screen and (max-device-width: 1366px) {
-    .parallax {
-        background-attachment: scroll;
-    }
-}
-
 .caption1, .caption2 {
     position: absolute;
     left: 0;
@@ -172,105 +152,36 @@ h2 span.white:before, h2 span.white:after {
 .caption1 {
     top: 40%;
 }
-.caption2 {
-    top: 45%;
-
+.caption404 {
+    /* background-color: transparent; */
+    color:#f2f2f2;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    /* position: relative; */
+    padding-top:13%;
+    padding-left: 25%;
+    padding-right: 25%;
 }
-.caption1 span.no-border, .caption2 span.no-border{
+.caption1 ,.span.no-border, .caption2 span.no-border{
     background-color: transparent;
     /* color: #bfc4c9; */
     color: #f2f2f2;
     /* color:#333333; */
     /* padding: 0 10px; */
-    font-size: 35px;
+    /* font-size: 35px; */
     
     /* font-weight: bold; */
     letter-spacing: 10px;
+    
 }
+
+
 #about, #my_work, #documents, #contact {
     background-color: transparent;
     margin-top: -66px;
     padding-top: 66px;
 }
-.active {
-    font-size: bold;
-}
-.download {
-    width: 50% !important;
-    margin-left:25% !important;
-    background-color:#d8d8d8; 
-    color:#43474f;
-    margin-bottom: 3.1rem;
-}
-.submit, .view-git {
-    background-color:#d8d8d8; 
-    color:#43474f;
-}
-
-.active {
-    color:#d8d8d8;
-}
-body, html {
-    height: 100%;
-    font-family: 'proximanova'
-}
-
-.wrapper {
-    width:100%;
-    /* The height needs to be set to a fixed value for the effect to work.
-     * 100vh is the full height of the viewport. */
-    height: 100%;
-    /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
-    overflow-x: hidden;
-    /* Enable scrolling on the page. */
-    /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
-    perspective: 2.1px;
-}
-.parallax:after {
-    /* Display and position the pseudo-element */
-    content: " ";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    
-    /* Move the pseudo-element back away from the camera,
-     * then scale it back up to fill the viewport.
-     * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
-    transform: translateZ(-1px) scale(1.5);
-    /* Force the background image to fill the whole element. */
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* Keep the image from overlapping sibling elements. */ 
-    z-index: -1;
-}
-  
-  /* The styling for the static div. */
-  /* Sets the actual background images to adorable kitties. This part is crucial. */
-.bg1:after {
-    background-image: url("images/1.jpg");
-}
-.section {
-    /* Needed for children to be absolutely positioned relative to the parent. */
-    /* position: relative; */
-    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-    height: 100%;
-    
-    /* For text formatting. */
-    /* display: flex; */
-    align-items: center;
-    /* justify-content: center; */
-    /* color: white; */
-    /* text-shadow: 0 0 5px #000; */
-}
-@font-face {
-    font-family: 'proximanova';
-    src: url('fonts/Proxima-Nova-Reg.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-     url('fonts/Proxima-Nova-Reg.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-     font-weight: normal;
-     font-style: normal;
-  } 
 .button {
     border: none;
     font-family:'proximanova', sans-serif;
@@ -283,7 +194,13 @@ body, html {
     transition-duration: 0.4s;
     cursor: pointer;
 }
-
+.download {
+    width: 70% !important;
+    margin-left:15% !important;
+    background-color:#d8d8d8;
+    margin-bottom: 3.1rem;
+    
+}
 .button-white {
     background-color: transparent; 
     color: #272727; 
@@ -307,6 +224,44 @@ body, html {
     color: #272727;
     text-decoration: none
 }
+.img1 {
+
+    /* The image used */
+    background: url("images/1.jpg");
+    /* Full height */
+    height: 100%; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img2 {
+
+    /* The image used */
+    background: url("images/3.jpg");
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-blend-mode: darken;
+    width:100%;
+    /* Full height */
+    height: 100%; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.darken-overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+@font-face {
+    font-family: 'proximanova';
+    src: url('fonts/Proxima-Nova-Reg.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+     url('fonts/Proxima-Nova-Reg.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+     font-weight: normal;
+     font-style: normal;
+  } 
 
 #fade-in span {
     margin-top: 25px;
@@ -319,7 +274,6 @@ body, html {
          -o-animation: fadein 1.5s; /* Opera < 12.1 */
             animation: fadein 1.5s;
 }
-
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }

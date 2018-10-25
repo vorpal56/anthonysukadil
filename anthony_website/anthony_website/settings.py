@@ -20,12 +20,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=9zwg3ev*wim!dn+cj4fd(5tw#a%oh+&(qiq=0v&c=swj8xqf#'
+# print(os.getenv('TESTING'))
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# you cant load static files while debug is false
+# DEBUG = False
 DEBUG = True
 
-ALLOWED_HOSTS = ['vorpal56.pythonanywhere.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['vorpal56.pythonanywhere.com/', '127.0.0.1', 'anthonysukadil.com']
 STATIC_URL = '/static/'
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
