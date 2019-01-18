@@ -1,8 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.core.mail import send_mail, BadHeaderError, EmailMessage
 from smtplib import SMTPSenderRefused
-from django.http import HttpResponse, HttpResponseRedirect
 from .forms import ContactForm
 
 # Create your views here.
@@ -39,20 +38,24 @@ class contactView(TemplateView):
                 'text':text,
                 'form_context':form,
                 'message': message,
+                'title': 'Anthony Sukadil - Message sent!'
             }
             try:
                 # send_mail(subject,message,email, ["anthonysukadil1@gmail.com"])
                 email_message_obj.send()
                 # print("hi")
             except BadHeaderError:
+
                 return(render(request, 'me/404.html'))
             except SMTPSenderRefused:
+
                 return(render(request, 'me/404.html'))
             return(render(request, self.template_name, contact_context))
         else:
             message= "Message failed to send, try refreshing the page again."
             contact_context ={
                 'message': message,
+                'title': 'Anthony Sukadil - Message sent!'
             }
             return(render(request, self.template_name, contact_context))
 
