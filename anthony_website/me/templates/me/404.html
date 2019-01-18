@@ -4,58 +4,65 @@
 <head>
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-    <link rel="icon" href="{% static 'images/icons/asiconblack2.png' %}">
+    <link rel="icon" href="{% static 'images/icons/asiconblack.png' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
 </head>
 <body>
     <title>404 Not Found</title>
-    <section class="img2" style="background-position-y : 0px">
+    <section class="img404" style="background-position-y : 0px">
     <div class="caption404 " id= "fade-in">
-        <span  style = "font-weight:bold;font-size:2.8em;">404</span><br><br>
-        <span  style="font-size:1.3em;">Something went wrong...</span><br>
-        <span  style="font-size:1.3em">
+        <span  style = "font-weight:bold;font-size:2em;">404</span><br><br>
+        <span >Something went wrong...</span><br>
+        <span >
             You have requested a page that was not found on this server.<br>
         This may be the result of a typo or a broken link.</span>
         <br>
-        <a class = "button button-dark" style="margin-top: 4.2em; margin-left:auto" 
+        <a class = "button button-dark" style="margin-top: 4.2em; margin-left:auto"
         href = "{% url 'homepage' %}">Back to Home</a>
     </div>
-    
+
     </section>
 </body>
 <footer class="pt-5 text-center text-small" style = "background-color:#272727; color:#f2f2f2">
     <p>&copy; 2018 Anthony Sukadil</p>
     <li class="list-inline-item"style="margin-right: 1.2rem">
-        <a href="https://github.com/vorpal56" >   
+        <a href="https://github.com/vorpal56" >
             <img src="{% static 'images/icons/GitHub-Mark-Light-64px.png' %}" width = "40" height = "40">
         </a>
     </li>
     <li class="list-inline-item" style = "margin-right: 1.6rem">
-        <a href="https://www.facebook.com/anthony.sukadil" >   
+        <a href="https://www.facebook.com/anthony.sukadil" >
             <img src="{% static 'images/icons/facebook-3-xxl.png' %}" width = "40" height = "40">
         </a>
     </li>
     <li class="list-inline-item"style="margin-right: 0.8rem">
-            <a href="https://www.linkedin.com/in/anthony-sukadil-b27787152/" >   
+            <a href="https://www.linkedin.com/in/anthony-sukadil-b27787152/" >
                 <img  src="{% static 'images/icons/In-White-48px-TM.png' %}" width = "48" height = "40">
             </a>
         </li>
     <li class="list-inline-item" style = "margin-bottom:4rem">
-        <a href="https://www.instagram.com/anthonysukadil/?hl=en" >   
+        <a href="https://www.instagram.com/anthonysukadil/?hl=en" >
             <img src="{% static 'images/icons/ig-logo.svg' %}" width = "40" height = "40">
         </a>
     </li>
     <!-- <li class="list-inline-item" style = "margin-bottom: 4rem"><a href="#">Support</a></li> -->
-</footer> 
+</footer>
 </html>
 <script src="{% static 'jquery-3.3.1.slim.min.js' %}"></script>
 
 <script>
-$(document).scroll(function () {
-    var $movebg = $(window).scrollTop() * -0.3;
-    $('.img2').css('background-positionY', ($movebg) + 'px');
-    });
+
+    if ($(document).width() >700) {
+        $(document).scroll(function () {
+        var $movebg = $(window).scrollTop() * -0.3;
+        $('.img404').css('background-positionY', ($movebg) + 'px');
+        });
+    }
+
 </script>
+
+
+
