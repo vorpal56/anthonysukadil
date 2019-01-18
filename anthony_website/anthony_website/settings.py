@@ -28,7 +28,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # DEBUG = False
 DEBUG = True
 
-ALLOWED_HOSTS = ['vorpal56.pythonanywhere.com/', '127.0.0.1', 'anthonysukadil.com']
+ALLOWED_HOSTS = ['vorpal56.pythonanywhere.com/', '127.0.0.1', 'www.anthonysukadil.com']
 STATIC_URL = '/static/'
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
